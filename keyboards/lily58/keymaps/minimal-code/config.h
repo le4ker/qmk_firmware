@@ -16,11 +16,11 @@
 #pragma once
 
 #define MASTER_LEFT
-#define SPLIT_LAYER_STATE_ENABLE // Share layer state with right half
+#define SPLIT_LAYER_STATE_ENABLE  // Share layer state with right half
 #define OLED_FADE_OUT
 #define OLED_FADE_OUT_INTERVAL 15 // Slowest fade out
 #define OLED_TIMEOUT 120000       // OLED timeout (ms)
-#define DEBOUNCE 8                // Debounce time (ms)
+#define DEBOUNCE 10               // Debounce time (ms)
 #define FORCE_NKRO                // N-Key Rollover on by default
 
 // Disabled features to improve the matrix scan rate

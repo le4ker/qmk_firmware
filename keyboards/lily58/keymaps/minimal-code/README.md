@@ -12,7 +12,7 @@ Features:
 - [N-Key Rollover](https://en.wikipedia.org/wiki/Key_rollover#n-key_rollover).
 - The
   [debounce algorithm](https://docs.qmk.fm/#/feature_debounce_type?id=types-of-debounce-algorithms)
-  is Eager per Key with 6 ms debounce time.
+  is Symmetric Eager per Key with 10 ms debounce time.
 - The OLED screen shows the current layer and the keymap name in both screens.
 - The keylogger functionality has been disabled for security reasons.
 
