@@ -13,6 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#include "keycodes.h"
 #include QMK_KEYBOARD_H
 
 enum layer_number {
@@ -46,15 +47,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * |      |      |      |      |      |      |-------.    ,-------| Left | Down |  Up  | Right|      |      |
-     * |------+------+------+------+------+------|  Mute |    | Play  |------+------+------+------+------+------|
+     * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
      * |LShift|      |      |      |      |      |-------|    |-------| Prev | VolDn| VolUp| Next |      |      |
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *                   | LCtl | LAlt | LGUI | /       /       \      \  | BriDn| BriUp| BASE |
+     *                   | LCtl | LAlt | LGUI | / Mute  /       \ Play \  | BriDn| BriUp| BASE |
      *                   |      |      |      |/       /         \      \ |      |      |      |
      *                   `----------------------------'           '------''--------------------'
      */
 
-    [_LOWER] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO, KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_MUTE, KC_MPLY, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, KC_NO, KC_NO, KC_LCTL, KC_LALT, KC_LGUI, KC_NO, KC_NO, KC_BRMD, KC_BRMU, TG(_LOWER))};
+    [_LOWER] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO, KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, KC_NO, KC_NO, KC_LCTL, KC_LALT, KC_LGUI, KC_MUTE, KC_MPLY, KC_BRMD, KC_BRMU, TG(_LOWER))};
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (!is_keyboard_master()) {
