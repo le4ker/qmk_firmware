@@ -19,17 +19,17 @@
 #define SPLIT_LAYER_STATE_ENABLE  // Share layer state with right half
 #define OLED_FADE_OUT
 #define OLED_FADE_OUT_INTERVAL 15 // Slowest fade out
-#define OLED_TIMEOUT 120000       // OLED timeout (ms)
+#define OLED_TIMEOUT 60000        // OLED timeout (ms)
 #define DEBOUNCE 5                // Debounce time (ms)
 #define FORCE_NKRO                // N-Key Rollover on by default
 
 // Disabled features to improve the matrix scan rate
-// and save firmware space.
+// and reduce firmware space.
 #define NO_ACTION_TAPPING
 #define NO_ACTION_ONESHOT
 
 #define OLED_UPDATE_INTERVAL 300 // Lower interval to improve matrix scan rate
-#define LAYER_STATE_8BIT         // 8 bit layer state to save space
+#define LAYER_STATE_8BIT         // 8 bit layer state to reduce space
 
 #define USB_POLLING_INTERVAL_MS 1 // Higher USB polling frequency
 
