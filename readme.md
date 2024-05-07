@@ -1,52 +1,27 @@
-# Quantum Mechanical Keyboard Firmware
+# Lily58 Minimal Code Layout
 
-[![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
-[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+This layout aims to balance muscle memory from a typical QWERTY layout while
+having all the keys used for software development at the first layer only.
 
-This is a keyboard firmware based on the
-[tmk_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful
-features for Atmel AVR and ARM controllers, and more specifically, the
-[OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com)
-keyboard, and the Clueboard product line.
+Features:
 
-## Documentation
+- Only one extra toggled layer with arrows, media and brightness keys that
+  follow VIM convention and F keys.
+- Matrix scan rate is improved from 1353 Hz that the default keymap achieves, to
+  1548 Hz.
+- [N-Key Rollover](https://en.wikipedia.org/wiki/Key_rollover#n-key_rollover).
+- The
+  [debounce algorithm](https://docs.qmk.fm/#/feature_debounce_type?id=types-of-debounce-algorithms)
+  is Symmetric Eager per Key with 5 ms debounce time.
+- The OLED screen shows the current layer and the keymap name in both screens.
+- The keylogger functionality has been disabled for security reasons.
 
-- [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
+## Base Layer
 
-The docs are powered by [Docsify](https://docsify.js.org/) and hosted on
-[GitHub](/docs/). They are also viewable offline; see
-[Previewing the Documentation](https://docs.qmk.fm/#/contributing?id=previewing-the-documentation)
-for more details.
+![Base Layer](.github/images/base.png)
 
-You can request changes by making a fork and opening a
-[pull request](https://github.com/qmk/qmk_firmware/pulls), or by clicking the
-"Edit this page" link at the bottom of any page.
+## Lower Layer
 
-## Supported Keyboards
+![Lower Layer](.github/images/lower.png)
 
-- [Planck](/keyboards/planck/)
-- [Preonic](/keyboards/preonic/)
-- [ErgoDox EZ](/keyboards/ergodox_ez/)
-- [Clueboard](/keyboards/clueboard/)
-- [Cluepad](/keyboards/clueboard/17/)
-- [Atreus](/keyboards/atreus/)
-
-The project also includes community support for
-[lots of other keyboards](/keyboards/).
-
-## Maintainers
-
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from
-the community, and of course, [Hasu](https://github.com/tmk). The OLKB product
-firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the
-Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), the Clueboard by
-[Zach White](https://github.com/skullydazed), and the Atreus by
-[Phil Hagelberg](https://github.com/technomancy).
-
-## Official Website
-
-[qmk.fm](https://qmk.fm) is the official website of QMK, where you can find
-links to this page, the documentation, and the keyboards supported by QMK.
+Source code located at `keyboards/lily58/keymaps/minimal-code/`
