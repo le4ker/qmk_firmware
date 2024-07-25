@@ -1,4 +1,4 @@
-/* Copyright 2023 @ Keychron (https://www.keychron.com)
+/* Copyright 2024 Yiancar-Designs
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,10 +13,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include "quantum.h"
 
-#pragma once
+void led_init_ports(void) {
+    // Set our LED pins as open drain outputs
+    gpio_set_pin_output_open_drain(B6);
+}
 
-#define SNLED27351_CURRENT_TUNE { 0xC0, 0xC0, 0x5D, 0xC0, 0xC0, 0x5D, 0xC0, 0xC0, 0x5D, 0xC0, 0xC0, 0x5D }
-
-/* Enable caps-lock LED */
-#define CAPS_LOCK_LED_INDEX 30
+layer_state_t layer_state_set_kb(layer_state_t state) {
+    gpio_write_pin(B6, !layer_state_cmp(state, 1));
+    return layer_state_set_user(state);
+}
