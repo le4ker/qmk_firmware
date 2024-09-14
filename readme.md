@@ -1,4 +1,4 @@
-# Lily58 Minimal Code Layout
+# Lily58 { minimal-code } Layout
 
 This layout aims to balance muscle memory from a typical QWERTY layout while
 having all the keys used for software development at the first layer only.
